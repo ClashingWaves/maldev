@@ -1,22 +1,10 @@
 ## `⚠️` Malware Development
-<p align="center" width="100%">
-    <img width="30%" src="https://user-images.githubusercontent.com/59679082/220690535-7516365f-3383-4385-b7b2-d511d8fb1d17.png"> 
-</p>
+
 
 This repository was created to archive and document all of my attempts to learn and develop malware. I'm brand new to all of this. We'll start from the absolute beginning and see how far we can get. This repository houses the code (often updated to reflect my current "skills" — or lack thereof) from my videos on [YouTube](https://youtube.com/@crr0ww) or my [blog](https://www.crow.rip). 
 
 > [!Important]
 > I can't believe this has to be said but I am _not_ a professional developer... _at all_. I will be making _a lot_ of mistakes (as a consequence of my being green to the scene) and I will never claim that any of my code is the best/most efficient or that any of these techniques are things that I've created/discovered. My repeated cringing at my old code has conditioned me to be rather self-conscious of my code and abilities as a whole, but as time progresses, I hope that my coding skills get better and better and that it reflects in this repository. But again, I'm new and learning like all of you were at some point.
-
-The techniques I'd love to learn are:
-
-- `🟢` [Shellcode Injection](https://www.crow.rip/crows-nest/mal/dev/inject/shellcode-injection) 
-- `🟢` [DLL Injection](https://www.crow.rip/crows-nest/mal/dev/inject/dll-injection) 
-- `🟢` [Using NTDLL](https://www.crow.rip/crows-nest/mal/dev/inject/ntapi-injection) 
-- `🟢` [Full NTDLL Implementation](https://www.crow.rip/crows-nest/mal/dev/inject/ntapi-injection/complete-ntapi-implementation)
-- `🟢` [Using Direct System Calls](https://www.crow.rip/crows-nest/mal/dev/inject/syscalls/direct-syscalls) 
-- `🟢` [Indirect Syscalls](https://www.crow.rip/crows-nest/mal/dev/inject/syscalls/indirect-syscalls)
-- ...
 
 > [!Note]
 > As I come across more stuff, I'll add more to the list. Moreover, as I complete the techniques above, I'll also update this list. My goal is to populate this repository with a variety of techniques related to process injection, thread hijacking, token-related stuff, kernel-related stuff, evasion-related stuff, etc. etc.
@@ -40,7 +28,7 @@ Since there has been a lot of attention on the videos and thus, a ton of people 
 #### Interference
 - A look into Windows Defender might be warranted since it can also interfere with our program's execution, so make sure to set exclusions accordingly.
 - You get a reverse shell or something after injecting a remote target process and for the first few seconds, it's fine. Then, the second you issue a command, Windows Defender (or some other security solution) kills your process/connection. This can be due to how signatured (`msfvenom` | `metasploit`) payloads, listeners, handlers, etc. are. Encrypt your traffic or use something less signatured. A reverse shell by itself is almost always suspicious so more techniques are going to be needed in conjunction with what we've learned above.
-- The (in)direct syscalls technique isn't working! This could be due to API Hooking. EDRs/security solutions will sometimes inject their own DLL into your process to hook commonly abused functions. The function(s) responsible for scraping the [syscall numbers](https://github.com/cr-0w/maldev/blob/dev/Direct%20Syscalls/injection.c#L11-L29) and [instructions](https://github.com/cr-0w/maldev/blob/dev/Indirect%20Syscalls/injection.c#L11-L42) currently don't incorporate a way to fight/circumnavigate API Hooking and will fall apart due to the offsets being borked. So, you're going to have to be stuck in limbo for a while and research how to do that yourself. Eventually (TM), I'll add a way to account for hooks, in which case, I'll just remove this line from the common pitfalls section. 
+- The (in)direct syscalls technique isn't working! This could be due to API Hooking. EDRs/security solutions will sometimes inject their own DLL into your process to hook commonly abused functions. The function(s) responsible for scraping the syscall numbers and instructions currently don't incorporate a way to fight/circumnavigate API Hooking and will fall apart due to the offsets being borked. So, you're going to have to be stuck in limbo for a while and research how to do that yourself. Eventually (TM), I'll add a way to account for hooks, in which case, I'll just remove this line from the common pitfalls section. 
 
 ## `🫂` Contributing
 I'm only going to be accepting bug fixes or typo fixes. Since this repository was created to document my personal growth with malware development, I don't want to cheat myself by having you contribute a technique which I myself am not currently capable of implementing. If I'm doing something super inefficently (which most of the time I am), then depending on what it is, it _might_ get accepted as a pull request. Either way, contributions are accepted based on those two (`2`) conditions. Thank you very much to everyone who helps out!
