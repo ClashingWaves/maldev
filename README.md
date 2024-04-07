@@ -1,7 +1,7 @@
 ## `⚠️` Malware Development
 
 
-This repository was created to archive and document all of my attempts to learn and develop malware. I'm brand new to all of this. We'll start from the absolute beginning and see how far we can get. This repository houses the code (often updated to reflect my current "skills" — or lack thereof) from my videos on [YouTube](https://youtube.com/@crr0ww) or my [blog](https://www.crow.rip). 
+This repository was created to archive and document all of my attempts to learn and develop malware. I'm brand new to all of this. We'll start from the absolute beginning and see how far we can get. This repository houses the code (often updated to reflect my current "skills" — or lack thereof) from my videos on [YouTube](https://www.youtube.com/channel/UC6GBNtOj8OinxOFCUXfi8ZA) or my [blog](https://noassosciation.gitbook.io/noassosciations-page). 
 
 > [!Important]
 > I can't believe this has to be said but I am _not_ a professional developer... _at all_. I will be making _a lot_ of mistakes (as a consequence of my being green to the scene) and I will never claim that any of my code is the best/most efficient or that any of these techniques are things that I've created/discovered. My repeated cringing at my old code has conditioned me to be rather self-conscious of my code and abilities as a whole, but as time progresses, I hope that my coding skills get better and better and that it reflects in this repository. But again, I'm new and learning like all of you were at some point.
